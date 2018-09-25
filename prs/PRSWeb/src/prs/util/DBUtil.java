@@ -1,4 +1,5 @@
-package prsDB;
+package prs.util;
+
 
 
 	import java.sql.Connection;
@@ -15,7 +16,7 @@ package prsDB;
 
 	    public static Connection getConnection() throws SQLException {
 		// set the db url, username, and password
-		String url = "jdbc:mysql://localhost:3306/prs?autoReconnect=true&useSSL=false";
+		String url = "jdbc:mysql://localhost:3306/prs?allowPublicKeyRetrieval=true&useSSL=false";
 		String username = "prs_user";
 		String password = "sesame";
 

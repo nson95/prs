@@ -1,28 +1,38 @@
 
 public class Product {
-	private int ID;
+	private int id;
 	private int vendorID;
-	private int partNumber;
+	private String partNumber;
 	private String name;
 	private double price;
-	private String user;
+	private String unit;
 	
-	public Product(int iD, int vendorID, int partNumber, String name, double price, String user) {
+	public Product(int id, int vendorID, String partNumber, String name, double price, String unit) {
 		super();
-		ID = iD;
+		this.id = id;
 		this.vendorID = vendorID;
 		this.partNumber = partNumber;
 		this.name = name;
 		this.price = price;
-		this.user = user;
+		this.unit = unit;
+	}
+	public Product(int vendorID, String partNumber, String name, double price, String unit) {
+		super();
+		this.vendorID = vendorID;
+		this.partNumber = partNumber;
+		this.name = name;
+		this.price = price;
+		this.unit = unit;
 	}
 
-	public int getID() {
-		return ID;
+
+
+	public int getId() {
+		return id;
 	}
 
-	public void setID(int iD) {
-		ID = iD;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public int getVendorID() {
@@ -33,11 +43,11 @@ public class Product {
 		this.vendorID = vendorID;
 	}
 
-	public int getPartNumber() {
+	public String getPartNumber() {
 		return partNumber;
 	}
 
-	public void setPartNumber(int partNumber) {
+	public void setPartNumber(String partNumber) {
 		this.partNumber = partNumber;
 	}
 
@@ -57,18 +67,18 @@ public class Product {
 		this.price = price;
 	}
 
-	public String getUser() {
-		return user;
+	public String getUnit() {
+		return unit;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setUnit(String unit) {
+		this.unit = unit;
 	}
 
 	@Override
 	public String toString() {
-		return "Product [ID=" + ID + ", vendorID=" + vendorID + ", partNumber=" + partNumber + ", name=" + name
-				+ ", price=" + price + ", user=" + user + "]";
+		return "Product [ID=" + id + ", vendorID=" + vendorID + ", partNumber=" + partNumber + ", name=" + name
+				+ ", price=" + price + ", unit=" + unit + "]";
 	}
 	
 	
